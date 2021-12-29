@@ -2,10 +2,10 @@
 <h3>Aplicação e um blog com integração com Prismic CMS</h3>
 <br/>
 
+<img src='./GitImg/space.png' alt='imagem de desmostracao' />
+
 <img src='./GitImg/spacetraveling.gif' alt='gif de desmostracao' />
-<br/>
-<br/>
-<img src='./GitImg/space.png' alt='gif de desmostracao' />
+
 
 <br/>
 <br/>
