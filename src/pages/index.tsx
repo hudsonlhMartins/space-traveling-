@@ -85,7 +85,7 @@ export default function Home({postsPagination }: HomeProps) {
       {posts.map(post =>(
               <section key={post.slug} className={styles.content}>
                 <Link href={`./post/${post.slug}`}>
-                  <a>{post.title}</a>
+                  <a>{post.title} | </a>
                 </Link>
                 
                 <p>{post.execerpt}</p>
