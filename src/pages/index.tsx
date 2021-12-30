@@ -123,11 +123,7 @@ export const getStaticProps: GetStaticProps = async ()=>{
       fetch: ['post.title', 'post.content', 'post.autor'],
       pageSize: 5,
     }
-  )
-
-  
-
-  
+  )  
 
 
   // response.next_page | prev_page

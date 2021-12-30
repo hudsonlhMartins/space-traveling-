@@ -1,35 +1,97 @@
 .container{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction:column;
 
-    .acticle{
-        margin-top: 2rem;
-        line-height: 2rem;
-        font-size: 1.125rem;
-        color: var(--gray-200);
-        max-width: 720px ;
 
-        h1, h2, h3, strong{
-            color: var(--gray-50);
-        }
+    .container_content{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction:column;
 
-        p, ul {
-            margin: 1.5rem 0;
-        }
-
-        ul{
-            padding-left: 1.5rem ;
-
-            li{
-                margin: 0.5rem 0;
+        .acticle{
+            margin-top: 2rem;
+            line-height: 2rem;
+            font-size: 1.125rem;
+            color: var(--gray-200);
+            max-width: 720px;
+    
+            h1, h2, h3, strong{
+                color: var(--gray-50);
+            }
+    
+            p, ul {
+                margin: 1.5rem 0;
+            }
+    
+            ul{
+                padding-left: 1.5rem ;
+    
+                li{
+                    margin: 0.5rem 0;
+                }
+            }
+    
+            a{
+                color: var(--rose-100);
+                text-decoration: none;
             }
         }
 
+
+    }
+
+
+    .line{
+        margin: 0 auto;
+        width: 720px;
+        position: relative;
+        padding: 1rem 0;
+    }
+    .line::after{
+        content: '';
+        position: absolute; 
+        width: 100%;
+        height: 1px;
+        background: var(--gray-700) ;
+    }
+
+    
+
+    .buttons_next_prev{
+        margin: 0 auto;
+        max-width: 720px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem ;
+        margin-bottom: 3rem;
+        cursor: pointer;
+        position: relative;
+
         a{
-            color: var(--rose-100);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
             text-decoration: none;
+            
+            &.a_last{
+                position: absolute;
+                right: 0;
+            }
+
+            i.last_i{
+                align-self: flex-end;
+            }
+
+            strong{
+                font-weight: 700;
+                color: var(--white-50);
+            }
+
+            i{
+                color: var(--rose-100);
+                font-weight: bold;
+            }
         }
     }
 
