@@ -42,7 +42,7 @@
 
     .line{
         margin: 0 auto;
-        width: 720px;
+        max-width: 720px;
         position: relative;
         padding: 1rem 0;
     }
@@ -74,9 +74,16 @@
             gap: 0.5rem;
             text-decoration: none;
             
+            
             &.a_last{
                 position: absolute;
                 right: 0;
+            }
+
+            &:hover{
+                i{
+                    filter: brightness(0.9);
+                }
             }
 
             i.last_i{
@@ -91,6 +98,7 @@
             i{
                 color: var(--rose-100);
                 font-weight: bold;
+                transition: filter 0.3s;
             }
         }
     }
@@ -130,3 +138,25 @@
         }
     }
 }
+
+
+@media (max-width: 700px){
+    .content_title, .acticle{
+        padding: 0 1rem;
+    }
+    
+}
+
+@media (max-width: 430px){
+
+    .buttons_next_prev{
+        a{
+            strong{
+                font-size: 13px;
+            }
+        }
+        
+    }
+
+}
+

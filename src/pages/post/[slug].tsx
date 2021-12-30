@@ -97,9 +97,6 @@ export default function Post ({post, nextPostFormated, prevPostFormated }: SlugP
                     </Link>
                 )}
 
-                
-              {console.log(nextPostFormated)}
-
               {nextPostFormated&&(
                 <Link href={ `/post/${nextPostFormated[0].uid}`}>
                     <a className={styles.a_last}>
