@@ -7,6 +7,7 @@ import { GetPrimiscClient } from '../../services/primisc'
 import styles from './styles.module.scss'
 import Link from 'next/link'
 import { useEffect } from 'react'
+import Head from 'next/head'
 
 type PostProps = {
     
@@ -51,6 +52,9 @@ export default function Post ({post, nextPostFormated, prevPostFormated }: SlugP
 
     return(
         <main className={styles.container}>
+                  <Head>
+                        <title>{post.title} </title>
+                    </Head>
             <div className={styles.container_content}>
 
                 <div className={styles.banner}>
@@ -115,48 +119,6 @@ export default function Post ({post, nextPostFormated, prevPostFormated }: SlugP
         </main>
     )
 }
-
-
-
-
-/*
-
-
-            <div className={styles.buttons_next_prev}>
-                {prevPostFormated !== [] &&(
-                <Link href={prevPostFormated ? `/post/${prevPostFormated[0].uid}`: '/'}>
-                    <a>
-                        <strong>{prevPostFormated[0].title}...</strong>
-                        <i>Post anterios</i>
-                    </a>
-                </Link>
-                )}
-
-                {nextPostFormated&&(
-                <Link href={ nextPostFormated ?`/post/${nextPostFormated[0].uid}`: '/'}>
-                    <a>
-                        <strong>{nextPostFormated[0].title}...</strong>
-                        <i className={styles.last_i}>Proximo post</i>
-                    </a>
-                </Link>
-                )}
-              
-
-               
-            </div>
-
-
-
-
-*/
-
-
-
-
-
-
-
-
 
 export const getStaticPaths: GetStaticPaths = ()=>{
     return{

@@ -10,6 +10,7 @@ import {FiCalendar, FiUser} from 'react-icons/fi'
 import styles from './home.module.scss'
 import Link from 'next/link'
 import { useState } from 'react'
+import Head from 'next/head'
 
 
 type Post ={
@@ -82,6 +83,9 @@ export default function Home({postsPagination }: HomeProps) {
 
   return (
     <main className={styles.container}>
+      <Head>
+        <title>Space Traveling </title>
+      </Head>
       {posts.map(post =>(
               <section key={post.slug} className={styles.content}>
                 <Link href={`./post/${post.slug}`}>
